@@ -1,4 +1,4 @@
-from series.series import fibonacci, lucas
+from series.series import fibonacci, lucas, sum_series
 
 
 def test_fibonacci_zero():
@@ -44,5 +44,16 @@ def test_lucas_three():
 
 def test_lucas_ten():
     actual = lucas(10)
+    expected = 123
+    assert actual == expected
+
+
+def test_sum_series_fib_ten():
+    actual = sum_series(10)
+    expected = 55
+    assert actual == expected
+
+def test_sum_series_lucas_ten():
+    actual = sum_series(10,2,1)
     expected = 123
     assert actual == expected
